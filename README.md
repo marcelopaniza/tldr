@@ -11,6 +11,7 @@
 [![Works with](https://img.shields.io/badge/works%20with-Claude%20Code-orange.svg)](https://code.claude.com)
 [![Bash](https://img.shields.io/badge/-bash%204%2B-4EAA25?logo=gnu-bash&logoColor=white)](#requirements)
 [![One toggle](https://img.shields.io/badge/one-slash%20command-yellow.svg)](#use)
+[![Privacy](https://img.shields.io/badge/privacy-no%20telemetry-brightgreen.svg)](PRIVACY.md)
 
 > **One slash command** · **~93 tokens per message when on, zero when off** · **No per-project setup** · **Persists across sessions**
 
@@ -43,6 +44,15 @@ You asked Claude what time it is. Three paragraphs later, you have a brief histo
 ```
 
 State lives at `~/.claude/plugins/data/tldr/state` and persists across sessions and projects. Toggle once, applies everywhere until you flip it off.
+
+## Use cases
+
+- **Quick syntax lookups** — "regex for a UUID v4" → the regex, not a history of regular expressions
+- **Stand-up summaries** — paste a transcript, get a 2-line summary, not a 6-paragraph minutes doc
+- **Code review** — Claude flags the issue, you read your diff, not an essay on best practices
+- **Incident triage** — what broke and what to roll back, in one screen
+- **Long sessions** — every reply is small, so `/compact` waits longer
+- **Quick fact checks** — "does Python have ternary?" → "yes: `x if cond else y`"
 
 ## What it costs
 
