@@ -1,0 +1,16 @@
+{
+  "name": "claude-tldr-plugin",
+  "owner": {
+    "name": "marcelopaniza"
+  },
+  "plugins": [
+    {
+      "name": "tldr",
+      "source": {
+        "source": "github",
+        "repo": "marcelopaniza/claude-tldr-plugin"
+      },
+      "description": "Toggle TL;DR response mode. When on, Claude answers concisely unless you explicitly ask for a full explanation."
+    }
+  ]
+}

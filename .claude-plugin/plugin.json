@@ -1,0 +1,5 @@
+{
+  "name": "tldr",
+  "description": "Toggle TL;DR response mode. When on, Claude answers maximally concisely unless you explicitly ask for a full explanation.",
+  "version": "0.1.0"
+}
