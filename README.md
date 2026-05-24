@@ -79,22 +79,3 @@ Test without installing:
 ```
 claude --plugin-dir /path/to/this/repo
 ```
-
-## Layout
-
-```
-.claude-plugin/
-  plugin.json         # plugin manifest
-  marketplace.json    # marketplace metadata
-skills/tldr/
-  SKILL.md            # /tldr:tldr slash command
-hooks/
-  hooks.json          # UserPromptSubmit wiring
-scripts/
-  toggle.sh           # state read/write
-  inject.sh           # ~93-token instruction emitted when ON
-```
-
-## Tuning
-
-Don't like the wording of the TL;DR instruction? Edit the heredoc in `scripts/inject.sh`. Want different escape phrases? Same place. Want the toggle scoped per-project instead of globally? Change the data directory in `scripts/toggle.sh` and `scripts/inject.sh` from `${CLAUDE_PLUGIN_DATA}` to something rooted under `${CLAUDE_PROJECT_DIR}/.claude/`.
