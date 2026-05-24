@@ -1,5 +1,5 @@
 {
-  "name": "claude-tldr-plugin",
+  "name": "tldr",
   "owner": {
     "name": "marcelopaniza"
   },
@@ -7,8 +7,8 @@
     {
       "name": "tldr",
       "source": {
-        "source": "github",
-        "repo": "marcelopaniza/claude-tldr-plugin"
+        "source": "url",
+        "url": "https://github.com/marcelopaniza/tldr.git"
       },
       "description": "Toggle TL;DR response mode. When on, Claude answers concisely unless you explicitly ask for a full explanation."
     }
