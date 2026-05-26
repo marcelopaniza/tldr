@@ -2,9 +2,12 @@
 set -euo pipefail
 
 # CLAUDE_PLUGIN_DATA is injected by Claude Code when this runs as part of the
-# plugin. Fall back to the conventional path so the script also works when
-# invoked directly (e.g. for testing).
-data_dir="${CLAUDE_PLUGIN_DATA:-$HOME/.claude/plugins/data/tldr}"
+# plugin. It has been observed pointing at a sibling plugin's data dir, so we
+# only trust it when its basename is 'tldr'; otherwise fall back to the
+# conventional path (which also covers direct invocation for testing).
+default_dir="$HOME/.claude/plugins/data/tldr"
+data_dir="${CLAUDE_PLUGIN_DATA:-$default_dir}"
+[ "$(basename "$data_dir")" = "tldr" ] || data_dir="$default_dir"
 mkdir -p "$data_dir"
 state_file="$data_dir/state"
 
